@@ -76,6 +76,8 @@ DEFINITION_MARKERS = {
     "定义",
 }
 
+REFERENCE_PATTERN = re.compile(r"\b(?:it|those|them|that one|first point|second point)\b", re.IGNORECASE)
+
 FORMULA_MARKERS = {
     "formula",
     "equation",
@@ -164,7 +166,7 @@ class RetrievalService:
             )
         candidate_floor = max(self.score_threshold * 0.45, 0.12)
         candidate_hits = [hit for hit in hits if hit.score >= candidate_floor]
-        reranked_hits = self._rerank_hits(question=question, hits=candidate_hits)
+        reranked_hits = self._rerank_hits(question=question, hits=candidate_hits, rewritten_query=rewritten_query)
         if profile.intent != "formula":
             reranked_hits = self._rerank_with_llm(question=question, hits=reranked_hits)
         return [
@@ -302,18 +304,22 @@ class RetrievalService:
     def _needs_query_rewrite(self, question: str, conversation_context: str | None) -> bool:
         if re.search("[\u4e00-\u9fff]", question):
             return True
-        lowered = question.lower()
-        if any(token in lowered for token in {"second point", "first point", "that one", "it", "those", "them"}):
+        if REFERENCE_PATTERN.search(question):
             return True
         if len(extract_keywords(question)) <= 2 and conversation_context:
             return True
         return False
 
-    def _rerank_hits(self, question: str, hits) -> list[tuple]:
+    def _rerank_hits(self, question: str, hits, rewritten_query: str | None = None) -> list[tuple]:
         if not hits:
             return []
 
         profile = self._build_question_profile(question)
+        if rewritten_query:
+            # A Chinese question shares no words with English documents; also score against its English rewrite.
+            profile.keywords |= {
+                keyword for keyword in extract_keywords(rewritten_query) if keyword not in RETRIEVAL_META_TERMS
+            }
         rescored_hits: list[ScoredHit] = []
         for hit in hits:
             support_score, marker_match = self._support_score(

@@ -24,6 +24,8 @@ backend/storage/demo-run/
 backend/storage/smoke-context/
 backend/storage/smoke-formats/
 backend/storage/smoke-web/
+backend/storage/eval-run/
+backend/storage/models/
 backend/storage/uploads/*
 !backend/storage/uploads/.gitkeep
 backend/logs/

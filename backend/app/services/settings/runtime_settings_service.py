@@ -242,6 +242,8 @@ class RuntimeSettingsService:
             return settings.bedrock_embedding_model or settings.embedding_model
         if embedding_provider == "openai":
             return settings.openai_embedding_model or settings.embedding_model
+        if embedding_provider == "local":
+            return settings.local_embedding_model
         return settings.embedding_model
 
     def _resolve_embedding_model(

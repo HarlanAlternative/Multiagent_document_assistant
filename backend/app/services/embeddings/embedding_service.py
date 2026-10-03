@@ -3,6 +3,7 @@ import math
 
 from app.core.config import get_settings
 from app.services.embeddings.bedrock_embedding_client import BedrockEmbeddingClient
+from app.services.embeddings.local_embedding_client import LocalEmbeddingClient
 from app.services.embeddings.openai_embedding_client import OpenAIEmbeddingClient
 from app.services.llm.base import LLMProviderConfig
 from app.services.settings.runtime_settings_service import RuntimeSettingsService
@@ -16,18 +17,33 @@ class EmbeddingService:
         self.runtime_settings_service = RuntimeSettingsService()
         self.bedrock_client = BedrockEmbeddingClient()
         self.openai_client = OpenAIEmbeddingClient()
+        self.local_client = LocalEmbeddingClient()
 
     def embed_texts(self, texts: list[str]) -> list[list[float]]:
+        return self._embed(texts, is_query=False)
+
+    def embed_query(self, text: str) -> list[float]:
+        return self._embed([text], is_query=True)[0]
+
+    def vector_size(self) -> int:
         config = self._get_runtime_config()
-        provider = (config.embedding_provider or "deterministic").strip().lower()
+        if self._provider(config) == "local":
+            return self.local_client.dimension(config)
+        return self.dimensions
+
+    def _embed(self, texts: list[str], is_query: bool) -> list[list[float]]:
+        config = self._get_runtime_config()
+        provider = self._provider(config)
         if provider == "bedrock":
             return self.bedrock_client.embed_texts(config=config, texts=texts, dimensions=self.dimensions)
         if provider == "openai":
             return self.openai_client.embed_texts(config=config, texts=texts, dimensions=self.dimensions)
+        if provider == "local":
+            return self.local_client.embed_texts(config=config, texts=texts, is_query=is_query)
         return [self._hash_to_vector(text) for text in texts]
 
-    def embed_query(self, text: str) -> list[float]:
-        return self.embed_texts([text])[0]
+    def _provider(self, config: LLMProviderConfig) -> str:
+        return (config.embedding_provider or "deterministic").strip().lower()
 
     def _get_runtime_config(self) -> LLMProviderConfig:
         effective = self.runtime_settings_service.get_effective_llm_settings()

@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session, joinedload
 from app.core.config import get_settings
 from app.models.chunk import Chunk
 from app.models.document import Document
+from app.services.embeddings.embedding_service import EmbeddingService
 from app.services.vectorstore.base import VectorSearchHit
 from app.services.vectorstore.simple_vector_store import LocalVectorStore
 
@@ -42,8 +43,17 @@ def _qdrant_imports() -> dict[str, Any]:
 class QdrantVectorStore:
     def __init__(self) -> None:
         settings = get_settings()
-        self.collection_name = settings.qdrant_collection_name
-        self.vector_size = settings.embedding_dimensions
+        try:
+            self.vector_size = EmbeddingService(dimensions=settings.embedding_dimensions).vector_size()
+        except Exception as exc:
+            logger.warning("Could not determine the embedding size, assuming %s: %s", settings.embedding_dimensions, exc)
+            self.vector_size = settings.embedding_dimensions
+        # A Qdrant collection has a fixed vector size, so other sizes (e.g. local models) get their own collection.
+        self.collection_name = (
+            settings.qdrant_collection_name
+            if self.vector_size == settings.embedding_dimensions
+            else f"{settings.qdrant_collection_name}_{self.vector_size}d"
+        )
         self.qdrant_url = settings.qdrant_url
         self.qdrant_api_key = settings.qdrant_api_key
         self.timeout = settings.qdrant_timeout_seconds

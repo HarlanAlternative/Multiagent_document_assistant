@@ -13,6 +13,7 @@ class Settings(BaseSettings):
         env_file=BACKEND_DIR / ".env",
         env_file_encoding="utf-8",
         case_sensitive=False,
+        extra="ignore",
     )
 
     app_name: str = "Multi-Agent Personal Knowledge Copilot"
@@ -38,6 +39,8 @@ class Settings(BaseSettings):
     aws_session_token: str | None = None
     embedding_model: str | None = None
     bedrock_embedding_model: str | None = "amazon.titan-embed-text-v2:0"
+    local_embedding_model: str = "Qwen/Qwen3-Embedding-0.6B-Q"
+    local_embedding_cache_dir: Path = BACKEND_DIR / "storage" / "models"
     chat_model: str | None = None
     router_model: str | None = None
     answer_model: str | None = None

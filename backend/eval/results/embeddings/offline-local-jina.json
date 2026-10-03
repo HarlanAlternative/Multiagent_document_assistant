@@ -1,0 +1,4109 @@
+{
+  "run": {
+    "name": "offline-local-jina",
+    "note": null,
+    "config": "offline",
+    "started_at": "2026-10-02T11:11:57+00:00",
+    "finished_at": "2026-10-02T11:12:21+00:00",
+    "git_commit": "ddead33 (uncommitted changes)",
+    "dataset": "lecture-slides-v1",
+    "dataset_sha256": "716a199a41a5",
+    "questions": 91,
+    "mode": "private_only",
+    "vector_store": "local",
+    "embedding": "local: jinaai/jina-embeddings-v2-base-zh",
+    "embedding_dimensions": 768,
+    "retrieval_top_k": 5,
+    "llm_timeout_seconds": 30,
+    "answer_model": null,
+    "judge_model": null,
+    "judge_provider": null,
+    "model_snapshots": []
+  },
+  "ingestion": [
+    {
+      "filename": "Charpeter1.pdf",
+      "pages": 59,
+      "chunks": 59,
+      "seconds": 4.45,
+      "usage": []
+    },
+    {
+      "filename": "char2.pdf",
+      "pages": 74,
+      "chunks": 74,
+      "seconds": 4.59,
+      "usage": []
+    },
+    {
+      "filename": "Lectures_Topic_02.pdf",
+      "pages": 30,
+      "chunks": 30,
+      "seconds": 1.24,
+      "usage": []
+    },
+    {
+      "filename": "Lectures_Topic_03_1.pdf",
+      "pages": 30,
+      "chunks": 30,
+      "seconds": 1.44,
+      "usage": []
+    },
+    {
+      "filename": "Lectures_Topic_03_2.pdf",
+      "pages": 33,
+      "chunks": 33,
+      "seconds": 1.43,
+      "usage": []
+    }
+  ],
+  "metrics": {
+    "heldout": {
+      "n": 72,
+      "hit@1": {
+        "count": 43,
+        "total": 72,
+        "rate": 0.5972,
+        "ci95": [
+          0.4818,
+          0.7028
+        ]
+      },
+      "hit@3": {
+        "count": 50,
+        "total": 72,
+        "rate": 0.6944,
+        "ci95": [
+          0.5805,
+          0.7887
+        ]
+      },
+      "hit@5": {
+        "count": 54,
+        "total": 72,
+        "rate": 0.75,
+        "ci95": [
+          0.6391,
+          0.8356
+        ]
+      },
+      "mrr@5": 0.6567,
+      "no_chunks_retrieved": {
+        "count": 15,
+        "total": 72,
+        "rate": 0.2083,
+        "ci95": [
+          0.1305,
+          0.3157
+        ]
+      },
+      "citation_hit": {
+        "count": 51,
+        "total": 72,
+        "rate": 0.7083,
+        "ci95": [
+          0.5949,
+          0.8006
+        ]
+      },
+      "citation_precision": {
+        "count": 58,
+        "total": 111,
+        "rate": 0.5225,
+        "ci95": [
+          0.4304,
+          0.6131
+        ]
+      },
+      "refused": {
+        "count": 15,
+        "total": 72,
+        "rate": 0.2083,
+        "ci95": [
+          0.1305,
+          0.3157
+        ]
+      },
+      "latency_s": {
+        "median": 0.115,
+        "p90": 0.123,
+        "mean": 0.114,
+        "max": 0.16
+      }
+    },
+    "dev": {
+      "n": 9,
+      "hit@1": {
+        "count": 5,
+        "total": 9,
+        "rate": 0.5556,
+        "ci95": [
+          0.2666,
+          0.8112
+        ]
+      },
+      "hit@3": {
+        "count": 5,
+        "total": 9,
+        "rate": 0.5556,
+        "ci95": [
+          0.2666,
+          0.8112
+        ]
+      },
+      "hit@5": {
+        "count": 5,
+        "total": 9,
+        "rate": 0.5556,
+        "ci95": [
+          0.2666,
+          0.8112
+        ]
+      },
+      "mrr@5": 0.5556,
+      "no_chunks_retrieved": {
+        "count": 4,
+        "total": 9,
+        "rate": 0.4444,
+        "ci95": [
+          0.1888,
+          0.7334
+        ]
+      },
+      "citation_hit": {
+        "count": 5,
+        "total": 9,
+        "rate": 0.5556,
+        "ci95": [
+          0.2666,
+          0.8112
+        ]
+      },
+      "citation_precision": {
+        "count": 6,
+        "total": 12,
+        "rate": 0.5,
+        "ci95": [
+          0.2538,
+          0.7462
+        ]
+      },
+      "refused": {
+        "count": 4,
+        "total": 9,
+        "rate": 0.4444,
+        "ci95": [
+          0.1888,
+          0.7334
+        ]
+      },
+      "latency_s": {
+        "median": 0.107,
+        "p90": 0.177,
+        "mean": 0.115,
+        "max": 0.177
+      }
+    },
+    "heldout_en": {
+      "n": 50,
+      "hit@1": {
+        "count": 37,
+        "total": 50,
+        "rate": 0.74,
+        "ci95": [
+          0.6045,
+          0.8413
+        ]
+      },
+      "hit@3": {
+        "count": 44,
+        "total": 50,
+        "rate": 0.88,
+        "ci95": [
+          0.7619,
+          0.9438
+        ]
+      },
+      "hit@5": {
+        "count": 48,
+        "total": 50,
+        "rate": 0.96,
+        "ci95": [
+          0.8654,
+          0.989
+        ]
+      },
+      "mrr@5": 0.8257,
+      "no_chunks_retrieved": {
+        "count": 0,
+        "total": 50,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0714
+        ]
+      },
+      "citation_hit": {
+        "count": 45,
+        "total": 50,
+        "rate": 0.9,
+        "ci95": [
+          0.7864,
+          0.9565
+        ]
+      },
+      "citation_precision": {
+        "count": 50,
+        "total": 94,
+        "rate": 0.5319,
+        "ci95": [
+          0.4318,
+          0.6295
+        ]
+      },
+      "refused": {
+        "count": 0,
+        "total": 50,
+        "rate": 0.0,
+        "ci95": [
+          0.0,
+          0.0714
+        ]
+      },
+      "latency_s": {
+        "median": 0.115,
+        "p90": 0.123,
+        "mean": 0.115,
+        "max": 0.16
+      }
+    },
+    "heldout_zh": {
+      "n": 22,
+      "hit@1": {
+        "count": 6,
+        "total": 22,
+        "rate": 0.2727,
+        "ci95": [
+          0.1315,
+          0.4815
+        ]
+      },
+      "hit@3": {
+        "count": 6,
+        "total": 22,
+        "rate": 0.2727,
+        "ci95": [
+          0.1315,
+          0.4815
+        ]
+      },
+      "hit@5": {
+        "count": 6,
+        "total": 22,
+        "rate": 0.2727,
+        "ci95": [
+          0.1315,
+          0.4815
+        ]
+      },
+      "mrr@5": 0.2727,
+      "no_chunks_retrieved": {
+        "count": 15,
+        "total": 22,
+        "rate": 0.6818,
+        "ci95": [
+          0.4732,
+          0.8364
+        ]
+      },
+      "citation_hit": {
+        "count": 6,
+        "total": 22,
+        "rate": 0.2727,
+        "ci95": [
+          0.1315,
+          0.4815
+        ]
+      },
+      "citation_precision": {
+        "count": 8,
+        "total": 17,
+        "rate": 0.4706,
+        "ci95": [
+          0.2616,
+          0.6904
+        ]
+      },
+      "refused": {
+        "count": 15,
+        "total": 22,
+        "rate": 0.6818,
+        "ci95": [
+          0.4732,
+          0.8364
+        ]
+      },
+      "latency_s": {
+        "median": 0.114,
+        "p90": 0.123,
+        "mean": 0.113,
+        "max": 0.125
+      }
+    },
+    "unanswerable": {
+      "n": 10,
+      "refused": {
+        "count": 5,
+        "total": 10,
+        "rate": 0.5,
+        "ci95": [
+          0.2366,
+          0.7634
+        ]
+      },
+      "no_chunks_retrieved": {
+        "count": 5,
+        "total": 10,
+        "rate": 0.5,
+        "ci95": [
+          0.2366,
+          0.7634
+        ]
+      },
+      "latency_s": {
+        "median": 0.109,
+        "p90": 0.129,
+        "mean": 0.115,
+        "max": 0.158
+      }
+    },
+    "all": {
+      "n": 91,
+      "failed_requests": 0,
+      "latency_s": {
+        "median": 0.114,
+        "p90": 0.123,
+        "mean": 0.115,
+        "max": 0.177
+      }
+    }
+  },
+  "llm_calls": {
+    "embed": {
+      "calls": 91,
+      "errors": 0,
+      "questions_with_call": 91,
+      "median_seconds": 0.02,
+      "mean_seconds": 0.02
+    }
+  },
+  "tokens": {},
+  "records": [
+    {
+      "id": "h01",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What three components define every generalized linear model?",
+      "latency_s": 0.112,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 12,
+          "score": 0.88
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10,
+          "score": 0.7212
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5,
+          "score": 0.6635
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 13,
+          "score": 0.5809
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 2,
+          "score": 0.5651
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 12
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5
+        }
+      ],
+      "answer": "The Generalized Linear Model is a broad class of regression models that includes these three types of models as well as many others. Revision of GLM Summary of Generalized linear models A generalized linear regression model for {(Yi, Xi)}n i=1 has the following assumptions: 1. Generalized Linear Models: Formulation, Estimation, Inference, Diagnostics and model comparison 3.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h02",
+      "split": "heldout",
+      "lang": "en",
+      "question": "In the catheter study, how many patients were measured and which variables were recorded?",
+      "latency_s": 0.117,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.027,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24,
+          "score": 0.7851
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 50,
+          "score": 0.5257
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 20,
+          "score": 0.4939
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30,
+          "score": 0.4917
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 20,
+          "score": 0.475
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24
+        }
+      ],
+      "answer": "The catheter length was measured as was the height and weight of the patients. GLM-examples Ordinary regression (Normal regression) Normal model - Catheter example For 12 young patients, catheters were fed from a principal vein into the heart. GLM-examples Poisson regression Creating Indicator Variables The indicator variables can be created by using factor and the way the variables were created can be determined by using contrasts: > crab.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h03",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What were the null and residual deviances for the Gaussian GLM fitted to the catheter data?",
+      "latency_s": 0.112,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.02,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30,
+          "score": 0.7783
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24,
+          "score": 0.7662
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37,
+          "score": 0.759
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 26,
+          "score": 0.7374
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 29,
+          "score": 0.7209
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 26
+        }
+      ],
+      "answer": "7291 Table: Max Log-Likelihood Under Alternative Link Functions (CHD Data) There is insufficient evidence to reject the null hypothesis that there is no difference between the fitted model and the saturated model. GLM-examples Ordinary regression (Normal regression) The Catheter Example: Predicted Values Suppose we wanted to predict the catheter length for a child that was 44 inches tall (X1) and weighed 35 pounds (X2). GLM-examples Ordinary regression (Normal regression) Normal model - Catheter example For 12 young patients, catheters were fed from a principal vein into the heart.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h04",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "导管长度的例子中，拟合出来的回归方程是什么？",
+      "latency_s": 0.125,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.034,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h05",
+      "split": "heldout",
+      "lang": "en",
+      "question": "How should the coefficient for height be interpreted in the catheter model?",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24,
+          "score": 0.7628
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 28,
+          "score": 0.6756
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30,
+          "score": 0.523
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 29,
+          "score": 0.4618
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 27,
+          "score": 0.4048
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 28
+        }
+      ],
+      "answer": "GLM-examples Ordinary regression (Normal regression) The Fitted Model II The fitted model defines a plane: ▶The coefficient for ht represents the slope when ht is varied and wt is held constant. The catheter length was measured as was the height and weight of the patients. ▶The coefficient for wt represents the slope when wt is varied and ht is held constant.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h06",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the 95% confidence interval for the height coefficient in the catheter model, and is height significant?",
+      "latency_s": 0.107,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.017,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 29,
+          "score": 1.4829
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 29
+        }
+      ],
+      "answer": ", the 95% confidence interval for βht is (-0. GLM-examples Ordinary regression (Normal regression) Catheter Example: Inference for model coefficients The output gives us all the information we need for inference concerning the coefficients (β): Estimate Std. 888) ▶also tests whether each individual coefficient could be 0.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h07",
+      "split": "heldout",
+      "lang": "en",
+      "question": "For a child 44 inches tall weighing 35 pounds, what catheter length does the model predict and what is the 95% prediction interval?",
+      "latency_s": 0.113,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.024,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30,
+          "score": 1.9853
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24,
+          "score": 0.8183
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 27,
+          "score": 0.7014
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 29,
+          "score": 0.5891
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 22,
+          "score": 0.5848
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30
+        }
+      ],
+      "answer": "GLM-examples Ordinary regression (Normal regression) The Catheter Example: Predicted Values Suppose we wanted to predict the catheter length for a child that was 44 inches tall (X1) and weighed 35 pounds (X2). 9807 To get a prediction interval for the catheter length: > predict(catheter. frame(ht=44, wt=35) > predict(catheter.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h08",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "为什么大多数GLM的最大似然估计没有显式解？用什么算法求解？",
+      "latency_s": 0.108,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.023,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h09",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are the steps of the usual approach to maximum likelihood estimation for GLMs?",
+      "latency_s": 0.12,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.026,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 16,
+          "score": 1.28
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 16
+        }
+      ],
+      "answer": "Statistical Procedures for Model-Based Data Analysis Fitting GLMs For GLMs, the estimated coefficients for the model are usually based on maximum likelihood (ML) estimation. The maximum likelihood estimate is bβ = argmaxβL(β) 16/59 ▶the likelihood function is the probability density function (pdf) of the response considered as a function of the model parameters.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h10",
+      "split": "heldout",
+      "lang": "en",
+      "question": "In the CHD example, what is the estimated coefficient for age in the logistic regression, and what is the fitted model?",
+      "latency_s": 0.112,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 30,
+          "score": 1.2782
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37,
+          "score": 1.2417
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 46,
+          "score": 1.2151
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 45,
+          "score": 1.2096
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 32,
+          "score": 1.1429
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 30
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 46
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 45
+        }
+      ],
+      "answer": "GoF χ2-test - Logistic/Poisson regression The Probit Fitted Model I Comparing the probit model to the logistic model for the CHD data: G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G 20 30 40 50 60 70 0. GoF χ2-test - Logistic/Poisson regression Goodness of Fit and the Deviance - CHD example Goodness of Fit test for the logistic models with different link functions: Model Deviance Degrees of freedom p-value logit link 34. GLM-examples Logistic regression The Probit Fitted Model II For this data, the fitted model using the probit link is very similar to that for the logit link.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h11",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Why is the first confidence interval for the probability of CHD at age 25 described as rough, and what better alternative is used?",
+      "latency_s": 0.128,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.035,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 40,
+          "score": 0.9365
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 35,
+          "score": 0.9362
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 32,
+          "score": 0.8877
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 32,
+          "score": 0.8027
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 30,
+          "score": 0.7914
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 40
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 35
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 32
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 32
+        }
+      ],
+      "answer": ") The aim is to relate the probability (p) of CHD to age. ▶Our logistic regression model related the probability of having CHD (π) to the age of the patient. 0 Age in years Probability of CHD logit probit 30/74",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h12",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "probit 回归和 logistic 回归有什么区别？什么时候结果会差别比较大？",
+      "latency_s": 0.117,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 46,
+          "score": 0.3578
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 43,
+          "score": 0.3512
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 45,
+          "score": 0.3479
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 44,
+          "score": 0.3385
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 30,
+          "score": 0.3276
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 46
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 43
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 45
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 44
+        }
+      ],
+      "answer": "GLM-examples Logistic regression The Probit Fitted Model II For this data, the fitted model using the probit link is very similar to that for the logit link. ▶Thus, unless we are estimating probabilities near 0 or 1, the fitted models for logistic regression and probit regression are quite similar. GLM-examples Logistic regression Probit Regression The probit link function is an alternative to the logit.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h13",
+      "split": "heldout",
+      "lang": "en",
+      "question": "In the horseshoe crab example, what is the response variable and which link function is used?",
+      "latency_s": 0.116,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.023,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 35,
+          "score": 1.2016
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 49,
+          "score": 1.1216
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 25,
+          "score": 0.8683
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 13,
+          "score": 0.8157
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10,
+          "score": 0.8024
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 35
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 49
+        }
+      ],
+      "answer": "▶Often the logit (log-odds) function is used as the link function: log \u0012 p 1 −p \u0013 = β0 + β1X1. A mathematical function (called the link function) that relates the expected value of the response to the linear combination of the explanatory variables. The link function of mean of the response, f (µi), is a linear combination of the explanatory terms Xi.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h14",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "在螃蟹（horseshoe crab）的泊松回归中，weight 的系数估计是多少？是否显著？",
+      "latency_s": 0.118,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.022,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 52,
+          "score": 0.5207
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 48,
+          "score": 0.3788
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 44,
+          "score": 0.3255
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 53,
+          "score": 0.3208
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 52,
+          "score": 0.3163
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 52
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 48
+        }
+      ],
+      "answer": "GLM-examples Poisson regression The Fitted Model With the log-link function, the mean number of satellites conditioned on the female crab weight and color is E[sate|weight, color = 1] = exp(−0. GLM-examples Poisson regression Crab example Female horseshoe crabs share a nest with a male partner. Consider a data set consisting of the following values: weight: Weight of the crab (grams), colour: colour of the crab (1=light medium , 2=medium, 3=dark medium, 4=dark) satellites: number of satellite crabs 48/59",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h15",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What does the covariance matrix of Y reduce to when the observations are independent with common variance sigma squared?",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 56,
+          "score": 1.1323
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 43,
+          "score": 0.6129
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 45,
+          "score": 0.5766
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 22,
+          "score": 0.5432
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 42,
+          "score": 0.4855
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 56
+        }
+      ],
+      "answer": "Appendix Vectors of Random Variables II Finally, we define the covariance matrix of Y as: ΣY =   var(Y1) cov(Y1, Y2) · · · cov(Y1, Yn) cov(Y2, Y1) var(Y2) · · · cov(Y2, Yn) . cov(Yn, Y1) cov(Yn, Y2) · · · var(Yn)   If the Yi’s are independent and all have variance σ2: ΣY =   σ2 0 · · · 0 0 σ2 · · · 0 . 02848 * ▶What does the first line test?",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h16",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "logit 函数和 expit 函数分别是什么？它们是什么关系？",
+      "latency_s": 0.112,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 54,
+          "score": 0.3806
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 54
+        }
+      ],
+      "answer": "Appendix A digression on log, logit and β Let’s remember a few things: exp(log(a)) = a for a > 0 log(exp(b)) = b for any b ∈R log(c × d) = log(c) + log(d) for c, d > 0 exp(r + s) = exp(r) × exp(s) for any r, s ∈R logit(p) = log \u0010 p 1−p \u0011 for p ∈(0, 1) expit(x) = exp(x) 1+exp(x) = 1 1+exp(−x) for any x ∈R logit((x)) = x for any x ∈R expit((p)) = p for p ∈(0, 1) exp((p)) = p 1−p = odds(p) for p ∈(0, 1) 54/59",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h17",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Which distributions does the generalized linear model family include besides the normal, binomial and Poisson?",
+      "latency_s": 0.12,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.038,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 12,
+          "score": 1.1946
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 59,
+          "score": 0.8814
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 2,
+          "score": 0.795
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 11,
+          "score": 0.7895
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10,
+          "score": 0.7428
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 12
+        }
+      ],
+      "answer": "Revision of GLM Generalized Linear Models I Ordinary (Normal) regression models, logistic regression models and Poisson regression models have a similar structure. The Generalized Linear Model is a broad class of regression models that includes these three types of models as well as many others. Appendix Some Generalized Linear Models We can write slide 11 as: ▶Normal regression: Y ∼Normal(µ, σ2In) µ = Xβ.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h18",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "统计推断在什么情况下可能产生误导？",
+      "latency_s": 0.105,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.014,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h19",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is a sampling distribution, and how do we imagine new samples for regression models?",
+      "latency_s": 0.114,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 21,
+          "score": 1.807
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 21
+        }
+      ],
+      "answer": "▶For regression models, we imagine new data where the values of the explanatory variables remain the same but the response changes. ▶Conceptually, a sampling distribution is a distribution generated by fitting our model to a large number of samples. However in many situations, we can use statistical theory to deduce a sampling distribution provided that our assumptions are valid.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h20",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What topics does the course overview list under regularization and flexible regression?",
+      "latency_s": 0.116,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.024,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5,
+          "score": 0.9931
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 4,
+          "score": 0.5632
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 22,
+          "score": 0.5482
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 43,
+          "score": 0.4737
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 3,
+          "score": 0.3983
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5
+        }
+      ],
+      "answer": "Regularization and Flexible Regression: Ridge and LASSO, Splines, Tree-based methods 5. , Does the regression explain more variation than pure noise? Course information Conceptual overview of 762 1.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h21",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the difference between an error and a residual?",
+      "latency_s": 0.111,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.018,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 7,
+          "score": 1.1612
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 7
+        }
+      ],
+      "answer": "Each residual is the difference between the observed value of the response and the expected value from the fitted model (bµi). Diagnostics Residuals Errors & Residuals Errors: Difference between the observed value and the mean from the true model. Hence, we cannot estimate the true error.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h22",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "Cook 距离衡量的是什么？值大说明什么？",
+      "latency_s": 0.123,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.034,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h23",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What does the diagonal of the hat matrix measure, and what range do its values take?",
+      "latency_s": 0.1,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.016,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 12,
+          "score": 0.8461
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 43,
+          "score": 0.573
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 45,
+          "score": 0.4899
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 22,
+          "score": 0.4237
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 17,
+          "score": 0.3036
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 12
+        }
+      ],
+      "answer": "The matrix H = X (XtX)−1 Xt is called the hat matrix as it converts the observed values Y into the fitted values bµ. + hinyn An analogous construction applies in GLM’s, where the hat matrix is defined using the IRLS procedure. 02848 * ▶What does the first line test?",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h24",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Which data problems and which model problems are diagnostics meant to detect?",
+      "latency_s": 0.106,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.018,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 4,
+          "score": 0.7341
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 3,
+          "score": 0.4004
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 4,
+          "score": 0.3985
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 7,
+          "score": 0.3862
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5,
+          "score": 0.384
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 4
+        }
+      ],
+      "answer": "Diagnostics Diagnostics are used to identify problems with the data and problems with the fitted model. Data Models } Data Model: } A set of concepts to describe the structure of a database, the operations for manipulating these structures, and certain constraints that the database should obey. } Data Model Structure and Constraints: } Constructs are used to define the database structure } Constructs typically include elements (and their data types) as well as groups of elements (e.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h25",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "什么是饱和模型（saturated model）？",
+      "latency_s": 0.102,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 17,
+          "score": 0.7675
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 36,
+          "score": 0.6927
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 18,
+          "score": 0.6012
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 17
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 36
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 18
+        }
+      ],
+      "answer": "GoF Assessing Model Fit The deviance of a model (Dev) compares the model being considered to the saturated (best possible) model in terms of the log Likelihood function: Dev = 2 log Lsat −2 log Lmod where Lsat and Lmod represent the maximum possible values of the Likelihood under the saturated model and under the model being considered, respectively. GoF χ2-test - Logistic/Poisson regression Goodness of Fit and the Deviance Large deviance indicates a lack of fit Small deviance means the model fits nearly as good as the best possible model A goodness-of-fit test comparing a model and a saturated model using Pearson’s Chi-Squared statistic χ2 χ2 = X i (ri −nipi(Xi))2 nipi(Xi) + (ni −ri −ni(1 −pi(Xi))2 ni(1 −pi(Xi)) Here, χ2 has an approximately Chi-squared distribution with the same degrees of freedom, n −k −1 (# of rows - # of parameters in model). GoF Saturated Models The saturated model represents the best possible fit to the data.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h26",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the formula for the F-statistic in the added-variable test?",
+      "latency_s": 0.108,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.017,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 21,
+          "score": 1.6146
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 21
+        }
+      ],
+      "answer": "GoF F-test - Ordinary linear regression Model comparison: F-Test II The F-statistic for the added variable test is defined in terms of the residual sums of squares (RSS) for the two models and the number of explanatory variables k in each model: fo = (RSSSub −RSSFull)/(kFull −kSub) RSSFull/(n −kFull −1) p-value = Pr(F ≥f0) where F ∼FkFull−kSub,n−kFull−1 21/74",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h27",
+      "split": "heldout",
+      "lang": "en",
+      "question": "For the catheter regression, what were the R-squared and the overall F-test result?",
+      "latency_s": 0.117,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.026,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 22,
+          "score": 0.8816
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24,
+          "score": 0.6989
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 20,
+          "score": 0.6865
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 21,
+          "score": 0.6814
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 30,
+          "score": 0.6591
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 22
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 24
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 20
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 21
+        }
+      ],
+      "answer": "GoF F-test - Ordinary linear regression Model comparison: Catheter example The bottom line of the output from summary is an added variable F-test: > summary(catheter. GLM-examples Ordinary regression (Normal regression) Normal model - Catheter example For 12 young patients, catheters were fed from a principal vein into the heart. GoF F-test - Ordinary linear regression Model comparison: F-Test I Now consider the problem of deciding which variables are needed in the model.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h28",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "在导管数据中，已经有身高的模型里再加入体重，F 检验的结论是什么？",
+      "latency_s": 0.117,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.024,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h29",
+      "split": "heldout",
+      "lang": "en",
+      "question": "When is the chi-squared approximation for the Pearson goodness-of-fit statistic reliable?",
+      "latency_s": 0.123,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.033,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 36,
+          "score": 1.3476
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37,
+          "score": 0.7809
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 40,
+          "score": 0.7631
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 42,
+          "score": 0.7403
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 1,
+          "score": 0.664
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 36
+        }
+      ],
+      "answer": "GoF χ2-test - Logistic/Poisson regression Goodness of Fit and the Deviance Large deviance indicates a lack of fit Small deviance means the model fits nearly as good as the best possible model A goodness-of-fit test comparing a model and a saturated model using Pearson’s Chi-Squared statistic χ2 χ2 = X i (ri −nipi(Xi))2 nipi(Xi) + (ni −ri −ni(1 −pi(Xi))2 ni(1 −pi(Xi)) Here, χ2 has an approximately Chi-squared distribution with the same degrees of freedom, n −k −1 (# of rows - # of parameters in model). GoF χ2-test - Logistic/Poisson regression Goodness of Fit and the Deviance - CHD example Goodness of Fit test for the logistic models with different link functions: Model Deviance Degrees of freedom p-value logit link 34. ▶Under the null hypothesis (and for a sufficiently large sample) the distribution of do is the Chi-squared distribution, χ2 v where v is the number of additional regressors in the full model.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h30",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What did the goodness-of-fit test conclude for the logit and probit models of the CHD data?",
+      "latency_s": 0.119,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.025,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 37,
+          "score": 1.4796
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 30,
+          "score": 1.0472
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 36,
+          "score": 0.962
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 32,
+          "score": 0.9593
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 46,
+          "score": 0.8869
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 37
+        }
+      ],
+      "answer": "GoF χ2-test - Logistic/Poisson regression Goodness of Fit and the Deviance - CHD example Goodness of Fit test for the logistic models with different link functions: Model Deviance Degrees of freedom p-value logit link 34. GoF χ2-test - Logistic/Poisson regression The Probit Fitted Model I Comparing the probit model to the logistic model for the CHD data: G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G G 20 30 40 50 60 70 0. GoF χ2-test - Logistic/Poisson regression Goodness of Fit and the Deviance Large deviance indicates a lack of fit Small deviance means the model fits nearly as good as the best possible model A goodness-of-fit test comparing a model and a saturated model using Pearson’s Chi-Squared statistic χ2 χ2 = X i (ri −nipi(Xi))2 nipi(Xi) + (ni −ri −ni(1 −pi(Xi))2 ni(1 −pi(Xi)) Here, χ2 has an approximately Chi-squared distribution with the same degrees of freedom, n −k −1 (# of rows - # of parameters in model).",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h31",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "似然比检验的统计量怎么计算？服从什么分布？",
+      "latency_s": 0.106,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.018,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h32",
+      "split": "heldout",
+      "lang": "en",
+      "question": "In the CHD example, what is the likelihood ratio test statistic for adding age, and its p-value?",
+      "latency_s": 0.116,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.022,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 41,
+          "score": 1.4686
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 40,
+          "score": 1.1992
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37,
+          "score": 1.029
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 31,
+          "score": 0.9865
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 44,
+          "score": 0.9819
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 41
+        }
+      ],
+      "answer": "GoF Likelihood ratio test CHD example For our CHD model, let the null model be the submodel and the model using age as a regressor be the full model. do = Devsub −Devfull ▶This is the likelihood ratio test statistic. GoF Likelihood ratio test Analysis of Deviance For GLM’s a submodel can be tested against a full model using the change in deviance between the two models as the test statistic.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h33",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Why does the p-value for colour change so much depending on whether it enters the crab model before or after weight?",
+      "latency_s": 0.125,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.033,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 44,
+          "score": 1.2023
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 59,
+          "score": 0.6942
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 38,
+          "score": 0.677
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 48,
+          "score": 0.66
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 43,
+          "score": 0.5866
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 44
+        }
+      ],
+      "answer": "633e-14 *** ▶The p-value for weight is extremely significant in both tables but the p-value for colour is much smaller when it is added first. Consider a data set consisting of the following values: weight: Weight of the crab (grams), colour: colour of the crab (1=light medium , 2=medium, 3=dark medium, 4=dark) satellites: number of satellite crabs 48/59 glm=glm(sats~colour+weight, family=poisson, data=crab.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h34",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "准泊松（quasipoisson）模型估计出来的离散参数是多少？说明什么？",
+      "latency_s": 0.105,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.018,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h35",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are two plausible causes of overdispersion in the crab data?",
+      "latency_s": 0.105,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.019,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 54,
+          "score": 1.9113
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 54
+        }
+      ],
+      "answer": "Modelling Dispersion in GLM Quasipoisson model example Causes of Overdispersion For the crab data there are two plausible explanations for the presence of overdispersion. How do each of these situations create overdispersion? 1.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h36",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are the mean and variance of the negative binomial distribution, and what happens as theta goes to infinity?",
+      "latency_s": 0.121,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 56,
+          "score": 1.9318
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 56
+        }
+      ],
+      "answer": "▶In fact, as θ goes to infinity the negative binomial distribution goes to the Poisson distribution. Γ (θ) \u0012 θ θ + µ \u0013θ \u0012 µ θ + µ \u0013x , µ, θ > 0 ▶The mean and variance are E(X) = µ and Var(X) = µ + µ2 θ ▶The variance is always greater than the mean but approaches the mean as θ goes to infinity. Modelling Dispersion in GLM Negative Binomial Regression Negative Binomial Regression One way to deal with count data that is overdispersed (relative to a Poisson model) is to use the negative binomial distribution.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h37",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "为什么不能直接用 glm() 拟合负二项回归？R 里用什么函数？",
+      "latency_s": 0.113,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.027,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h38",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are the trade-offs between using a quasi-likelihood model and a full distributional model such as the negative binomial?",
+      "latency_s": 0.129,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.035,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 63,
+          "score": 1.2618
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 40,
+          "score": 1.1765
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 50,
+          "score": 1.1619
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 59,
+          "score": 1.1485
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 58,
+          "score": 1.1295
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 63
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 40
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 50
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 59
+        }
+      ],
+      "answer": "GoF Likelihood ratio test Analysis of Deviance For GLM’s a submodel can be tested against a full model using the change in deviance between the two models as the test statistic. Modelling Dispersion in GLM Negative Binomial Regression Fitting the Negative Binomial Model To fit the negative binomial model for the crab data using R: library(MASS) crabNB. Modelling Dispersion in GLM Negative Binomial Regression Quasi-models or a distributional assumption?",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h39",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is an offset in a Poisson regression, and why would you use one?",
+      "latency_s": 0.125,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.035,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 68,
+          "score": 1.2881
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 68
+        }
+      ],
+      "answer": "▶By including this offset in a Poisson regression model for the cancer data, it means that the other regressors are now modelling log µ100,000. An offset is a regressor in a regression model whose coefficient is fixed at 1. Offsets Offsets Definition ▶The term log(x/100000) is called an offset.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h40",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "儿童癌症例子里，城市居民的癌症死亡率是农村的多少倍？",
+      "latency_s": 0.115,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.03,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h41",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Which interaction term in the childhood cancer model is clearly significant?",
+      "latency_s": 0.105,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 69,
+          "score": 1.1042
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 37,
+          "score": 0.4305
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 68,
+          "score": 0.3754
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 66,
+          "score": 0.3575
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 67,
+          "score": 0.311
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 69
+        }
+      ],
+      "answer": "304491 ▶Cytology:Age is the only interaction term that is clearly significant. Offsets Fitting Poisson Model with Offset > model1<-glm(n ~ Cytology*Age*Residence+offset(log(pop/100000)), family=poisson, data=cancer. GLM-examples Logistic regression The Fitted Model Our fitted regression model is bp = exp(−5.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h42",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are the three levels of the three-schema architecture and what does each describe?",
+      "latency_s": 0.118,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.032,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 12,
+          "score": 1.2763
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 10,
+          "score": 1.0933
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 12
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 10
+        }
+      ],
+      "answer": "Three-Schema Architecture } Mappings among schema levels are needed to transform requests and data. Three-Schema Architecture } Proposed to support DBMS characteristics of: } Program-data independence. } Defines DBMS schemas at three levels: } Internal schema at the internal level to describe physical storage structures and access paths (e.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h43",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "逻辑数据独立性和物理数据独立性有什么区别？",
+      "latency_s": 0.106,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h44",
+      "split": "heldout",
+      "lang": "en",
+      "question": "How does a database schema differ from a database state?",
+      "latency_s": 0.12,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.027,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 6,
+          "score": 0.892
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 7,
+          "score": 0.7181
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 8,
+          "score": 0.6683
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 6,
+          "score": 0.664
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 9,
+          "score": 0.6452
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 6
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 7
+        }
+      ],
+      "answer": "} Database Schema: } The description of a database. } Schema Diagram: } An illustrative display of (most aspects of) a database schema. Schemas versus Instances } Database State: } The actual data stored in a database at a particular moment in time.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h45",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the difference between procedural and non-procedural DML?",
+      "latency_s": 0.101,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.022,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 16,
+          "score": 1.0067
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 7,
+          "score": 0.8746
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 9,
+          "score": 0.824
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 16
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 7
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 9
+        }
+      ],
+      "answer": "Types of DML } High Level or Non-procedural Language: } These include the SQL relational language } Are “set”-oriented and specify what data to retrieve rather than how to retrieve it. Each residual is the difference between the observed value of the response and the expected value from the fitted model (bµi). Diagnostics Residuals Pearson residuals Pearson residuals r’s are standardized measures of the difference between observed values and expected values in statistical models.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h46",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "三层客户端-服务器架构的中间层负责什么？为什么能提高安全性？",
+      "latency_s": 0.108,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h47",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are the main categories of data models?",
+      "latency_s": 0.12,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.031,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 5,
+          "score": 1.2742
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 30,
+          "score": 1.2693
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 5
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 30
+        }
+      ],
+      "answer": "Summary } We distinguish three main categories of data models: } High-level or conceptual data models (based on entities and relationships) } Low level or physical data models } Representation or implementation data models (record-based, object-oriented) } We distinguished three-schema DBMS architecture, i. Categories of Data Models } Conceptual (high-level, semantic) data models: } Provide concepts that are close to the way many users perceive data. } Self-Describing Data Models: } Combine the description of data with the data values.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h48",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Give examples of programming-language interfaces to a DBMS.",
+      "latency_s": 0.123,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.029,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 19,
+          "score": 0.9921
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 17,
+          "score": 0.8361
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 15,
+          "score": 0.7819
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 16,
+          "score": 0.6353
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 30,
+          "score": 0.5031
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 19
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 17
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 15
+        }
+      ],
+      "answer": "DBMS Programming Language Interfaces } Programmer interfaces for embedding DML in a programming languages: } Embedded Approach: e. JDBC for Java, ODBC (Open Databse Connectivity) for other programming languages as API’s (application programming interfaces) } Database Programming Language Approach: e. DBMS Interfaces } Stand-alone query language interfaces } Example: Entering SQL queries at the DBMS interactive SQL interface (e.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h49",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "DBMS 按数据模型可以分成哪些类型？",
+      "latency_s": 0.12,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 30,
+          "score": 0.3271
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 5,
+          "score": 0.3151
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 30
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 5
+        }
+      ],
+      "answer": "Summary } We distinguish three main categories of data models: } High-level or conceptual data models (based on entities and relationships) } Low level or physical data models } Representation or implementation data models (record-based, object-oriented) } We distinguished three-schema DBMS architecture, i. } We discussed the main types of language and interfaces of DBMS. } We discussed different types of interfaces of DBMS.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h50",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What kinds of tasks do database system utilities perform?",
+      "latency_s": 0.104,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 21,
+          "score": 0.9655
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 1,
+          "score": 0.5414
+        },
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 7,
+          "score": 0.3179
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 32,
+          "score": 0.3143
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 21
+        }
+      ],
+      "answer": "Database System Utilities } To perform certain functions such as: } Loading data stored in files into a database. Database System Concepts and Architecture COMPSCI 351 Fundamentals of Database Systems record instance, table instance, entity instance } Initial Database State: } Refers to the database state when it is initially loaded into the system.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h51",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the role of DDL, SDL and VDL?",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 14,
+          "score": 0.8541
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 7,
+          "score": 0.6611
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_02.pdf",
+          "page": 14
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 7
+        }
+      ],
+      "answer": "} In some DBMSs, separate storage definition language (SDL) and view definition language (VDL) are used to define internal and external schemas. } For example, SUPERVISION relationships between EMPLOYEE (in role of supervisor or boss) and (another) EMPLOYEE (in role of subordinate or worker). DBMS Languages } Data Definition Language (DDL): } Used by the DBA and database designers to specify the conceptual schema of a database.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h52",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the difference between a composite attribute and a multi-valued attribute?",
+      "latency_s": 0.117,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.031,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 11,
+          "score": 1.2969
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 11
+        }
+      ],
+      "answer": "} For example, PreviousDegrees of a STUDENT is a composite multi-valued attribute denoted by {PreviousDegrees (College, Year, Degree, Field)} } Multiple PreviousDegrees values can exist } Each has four subcomponent attributes: } College, Year, Degree, Field 11 Types of Attributes } In general, composite and multi-valued attributes may be nested arbitrarily to any number of levels, although this is rare.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h53",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "什么是派生属性？举个例子。",
+      "latency_s": 0.121,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.03,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h54",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Can an entity type have more than one key? Give the example used in the slides.",
+      "latency_s": 0.116,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.031,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 14,
+          "score": 1.685
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2,
+          "score": 1.1128
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 10,
+          "score": 1.046
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 13,
+          "score": 1.0457
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 11,
+          "score": 0.938
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 14
+        }
+      ],
+      "answer": "} An entity type may have more than one key. Discussion on Relationship Types } In the refined design, some attributes from the initial entity types are refined into relationships: } Manager of DEPARTMENT -> MANAGES } Works_on of EMPLOYEE -> WORKS_ON } Department of EMPLOYEE -> WORKS_FOR } In general, more than one relationship type can exist between the same participating entity types } MANAGES and WORKS_FOR are distinct relationship types between EMPLOYEE and DEPARTMENT } Different meanings and different relationship instances. Weak Entity Types } An entity that does not have a key attribute and that is identification-dependent on another entity type.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h55",
+      "split": "heldout",
+      "lang": "en",
+      "question": "How are entity types, attributes, key attributes and multivalued attributes drawn in an ER diagram?",
+      "latency_s": 0.108,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.019,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 2,
+          "score": 1.2773
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 18,
+          "score": 1.0528
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 13,
+          "score": 0.9911
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 23,
+          "score": 0.9631
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 14,
+          "score": 0.9619
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 2
+        }
+      ],
+      "answer": "Outline } Overview of Database Design Process } Example Database Application (COMPANY) } ER Model Concepts } Entities and Attributes } Entity Types, Value Sets, and Key Attributes } Relationships and Relationship Types } Weak Entity Types } Roles and Attributes in Relationship Types } ER Diagrams - Notation } ER Diagram for COMPANY Schema } Alternative Notations – UML class diagrams, others } Relationships of Higher Degree 2 Displaying an Entity type } In ER diagrams, an entity type is displayed in a rectangular box } Attributes are displayed in ovals } Each attribute is connected to its entity type } Components of a composite attribute are connected to the oval representing the composite attribute } Each key attribute is underlined } Multivalued attributes displayed in double ovals } See the full ER notation in advance on the next slide 18 Entity Types and Key Attributes } Entities with the same basic attributes are grouped or typed into an entity type.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h56",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "COMPANY 数据库中，每个部门需要记录哪些信息？",
+      "latency_s": 0.123,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.032,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h57",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Which six relationship types are identified for the COMPANY database?",
+      "latency_s": 0.108,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.018,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 29,
+          "score": 1.6761
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 33,
+          "score": 1.0277
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 21,
+          "score": 0.8489
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 2,
+          "score": 0.8401
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2,
+          "score": 0.8144
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 29
+        }
+      ],
+      "answer": "Refining the COMPANY database schema by introducing relationships } By examining the requirements, six relationship types are identified } All are binary relationships( degree 2) } Listed below with their participating entity types: } WORKS_FOR (between EMPLOYEE, DEPARTMENT) } MANAGES (also between EMPLOYEE, DEPARTMENT) } CONTROLS (between DEPARTMENT, PROJECT) } WORKS_ON (between EMPLOYEE, PROJECT) } SUPERVISION (between EMPLOYEE (as subordinate), EMPLOYEE (as supervisor)) } DEPENDENTS_OF (between EMPLOYEE, DEPENDENT) 29 Summary } ER Model Concepts: Entities, attributes, relationships } Constraints in the ER model } Using ER in step-by-step mode conceptual schema design for the COMPANY database } ER Diagrams - Notation } Alternative Notations – UML class diagrams, others } Binary Relationship types and those of higher degree. Initial Conceptual Design of Entity Types } Based on the requirements, we can identify four initial entity types in the COMPANY database: } DEPARTMENT } PROJECT } EMPLOYEE } DEPENDENT } Their initial conceptual design is shown on the following slide } The initial attributes shown are derived from the requirements description 21",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h58",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the cardinality ratio of WORKS_ON between EMPLOYEE and PROJECT, compared with WORKS_FOR?",
+      "latency_s": 0.115,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 29,
+          "score": 1.3886
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2,
+          "score": 1.2791
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 26,
+          "score": 1.2385
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 29
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 26
+        }
+      ],
+      "answer": "Relationship instances of WORKS_ON: M:N M:N WORKS_ON relationship between EMPLOYEE and PROJECT 26 Refining the COMPANY database schema by introducing relationships } By examining the requirements, six relationship types are identified } All are binary relationships( degree 2) } Listed below with their participating entity types: } WORKS_FOR (between EMPLOYEE, DEPARTMENT) } MANAGES (also between EMPLOYEE, DEPARTMENT) } CONTROLS (between DEPARTMENT, PROJECT) } WORKS_ON (between EMPLOYEE, PROJECT) } SUPERVISION (between EMPLOYEE (as subordinate), EMPLOYEE (as supervisor)) } DEPENDENTS_OF (between EMPLOYEE, DEPENDENT) 29 Discussion on Relationship Types } In the refined design, some attributes from the initial entity types are refined into relationships: } Manager of DEPARTMENT -> MANAGES } Works_on of EMPLOYEE -> WORKS_ON } Department of EMPLOYEE -> WORKS_FOR } In general, more than one relationship type can exist between the same participating entity types } MANAGES and WORKS_FOR are distinct relationship types between EMPLOYEE and DEPARTMENT } Different meanings and different relationship instances.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h59",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "关系类型（relationship type）的度（degree）指的是什么？",
+      "latency_s": 0.114,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.024,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 24,
+          "score": 0.7217
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 27,
+          "score": 0.6002
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 11,
+          "score": 0.5862
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2,
+          "score": 0.5609
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 28,
+          "score": 0.5549
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 24
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 27
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 11
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2
+        }
+      ],
+      "answer": "} The degree of a relationship type is the number of participating entity types. } Relationships of the same type are grouped or typed into a relationship type. } For example, the WORKS_ON relationship type in which EMPLOYEEs and PROJECTs participate, or the MANAGES relationship type in which EMPLOYEEs and DEPARTMENTs participate.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h60",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is the difference between a relationship type and a relationship set?",
+      "latency_s": 0.122,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.03,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 27,
+          "score": 1.3645
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 28,
+          "score": 1.2488
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 27
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 28
+        }
+      ],
+      "answer": "relationship set } Relationship Type: } Is the schema description of a relationship } Identifies the relationship name and the participating entity types } Also identifies certain relationship constraints } Relationship Set: } The current set of relationship instances represented in the database } The current state of a relationship type 27 relationship set } Previous figures displayed the relationship sets } Each instance in the set relates individual participating entities – one from each participating entity type } In ER diagrams, we represent the relationship type as follows: } Diamond-shaped box is used to display a relationship type } Connected to the participating entity types via straight lines } Note that the relationship type is not shown with an arrow. Relationship type vs.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h61",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is an entity set?",
+      "latency_s": 0.099,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.014,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 15,
+          "score": 1.0177
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 17,
+          "score": 0.9599
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 14,
+          "score": 0.8048
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 15
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 17
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 14
+        }
+      ],
+      "answer": "Notation for Constraints on Relationships } A Total participation of an entity set represents that each entity in entity set must have at least one relationship in a relationship set. Entity Set } Each entity type will have a collection of entities stored in the database, e. , CAR entity instances } Called the entity set or sometimes entity collection } Entity set is the current state of the entities of that type that are stored in the database 15",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h62",
+      "split": "heldout",
+      "lang": "en",
+      "question": "How is an attribute defined mathematically in the ER model?",
+      "latency_s": 0.114,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.02,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 8,
+          "score": 0.8995
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 17,
+          "score": 0.7811
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 33,
+          "score": 0.7692
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 23,
+          "score": 0.651
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 2,
+          "score": 0.5784
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 8
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 17
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 33
+        }
+      ],
+      "answer": "ER Model Concepts } Entities and Attributes } Entity is a basic concept for the ER model. Attributes and Value Sets } Mathematically, an attribute A for an entity type E whose value set is V is defined as a function A : E -> P(V) Where P(V) indicates a power set (which means all possible subsets) of V. Summary } ER Model Concepts: Entities, attributes, relationships } Constraints in the ER model } Using ER in step-by-step mode conceptual schema design for the COMPANY database } ER Diagrams - Notation } Alternative Notations – UML class diagrams, others } Binary Relationship types and those of higher degree.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h63",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What is a weak entity type, and how are its entities identified?",
+      "latency_s": 0.119,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 10,
+          "score": 1.5558
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 10
+        }
+      ],
+      "answer": "} A weak entity must participate in an identifying relationship type with an owner or identifying entity type } Entities are identified by the combination of: } A partial key of the weak entity type, which is denoted by underlined with a dashed or dotted line. } The particular entity they are related to in the identifying relationship type } Example: } A DEPENDENT entity is identified by the dependent’s first name, and the specific EMPLOYEE with whom the dependent is related } Name of DEPENDENT is the partial key } DEPENDENT is a weak entity type } EMPLOYEE is its identifying entity type via the identifying relationship type DEPENDENT_OF 10 Weak Entity Types } An entity that does not have a key attribute and that is identification-dependent on another entity type.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h64",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "什么是递归关系？举例说明。",
+      "latency_s": 0.103,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h65",
+      "split": "heldout",
+      "lang": "en",
+      "question": "In (min, max) notation, what constraints are given for EMPLOYEE and DEPARTMENT in the MANAGES relationship?",
+      "latency_s": 0.16,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.02,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 16,
+          "score": 1.6742
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 16
+        }
+      ],
+      "answer": "Alternative (min, max) notation for relationship structural constraints: } Examples: } A department has exactly one manager and an employee can manage at most one department. } Specify (0,1) for participation of EMPLOYEE in MANAGES } Specify (1,1) for participation of DEPARTMENT in MANAGES } An employee can work for exactly one department but a department can have any number of employees. } Specify (1,1) for participation of EMPLOYEE in WORKS_FOR } Specify (0,n) for participation of DEPARTMENT in WORKS_FOR 16",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h66",
+      "split": "heldout",
+      "lang": "en",
+      "question": "How are total and partial participation shown in an ER diagram?",
+      "latency_s": 0.106,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.017,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 10,
+          "score": 0.6803
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 7,
+          "score": 0.5765
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 2,
+          "score": 0.5637
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 13,
+          "score": 0.5473
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 30,
+          "score": 0.5391
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 10
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 7
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 2
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 13
+        }
+      ],
+      "answer": "It is represented by dashed oval in an ER Diagram. } Total participation is shown by a double line, partial is denoted by a single line. } In ER diagram, need to display role names to distinguish participations.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h67",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "关系上的约束有哪两类？分别规定什么？",
+      "latency_s": 0.119,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.033,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "h68",
+      "split": "heldout",
+      "lang": "en",
+      "question": "When can an attribute of a relationship type be moved to one of the participating entity types?",
+      "latency_s": 0.114,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.026,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 28,
+          "score": 1.4906
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 27,
+          "score": 1.3654
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2,
+          "score": 1.3613
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 24,
+          "score": 1.2456
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 11,
+          "score": 1.1057
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 28
+        },
+        {
+          "filename": "Lectures_Topic_03_1.pdf",
+          "page": 27
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 2
+        }
+      ],
+      "answer": "relationship set } Previous figures displayed the relationship sets } Each instance in the set relates individual participating entities – one from each participating entity type } In ER diagrams, we represent the relationship type as follows: } Diamond-shaped box is used to display a relationship type } Connected to the participating entity types via straight lines } Note that the relationship type is not shown with an arrow. relationship set } Relationship Type: } Is the schema description of a relationship } Identifies the relationship name and the participating entity types } Also identifies certain relationship constraints } Relationship Set: } The current set of relationship instances represented in the database } The current state of a relationship type 27 Discussion on Relationship Types } In the refined design, some attributes from the initial entity types are refined into relationships: } Manager of DEPARTMENT -> MANAGES } Works_on of EMPLOYEE -> WORKS_ON } Department of EMPLOYEE -> WORKS_FOR } In general, more than one relationship type can exist between the same participating entity types } MANAGES and WORKS_FOR are distinct relationship types between EMPLOYEE and DE...",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h69",
+      "split": "heldout",
+      "lang": "en",
+      "question": "Is a ternary relationship equivalent to three binary relationships?",
+      "latency_s": 0.118,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.028,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 23,
+          "score": 1.1069
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 24,
+          "score": 1.0174
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 26,
+          "score": 0.82
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 27,
+          "score": 0.7325
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 25,
+          "score": 0.6993
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 23
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 24
+        }
+      ],
+      "answer": "Relationships of Higher Degree } Relationship types of degree 2 are called binary } Relationship types of degree 3 are called ternary and of degree n are called n-ary } In general, an n-ary relationship is not equivalent to n binary relationships } Constraints are harder to specify for higher-degree relationships (n > 2) than for binary relationships 23 Discussion of n-ary relationships (n > 2) } In general, 3 binary relationships can represent different information than a single ternary relationship (see Figure 3. 17a and b, where all relationships convey different meanings) } In some cases, a ternary relationship can be represented as a weak entity if the data model allows a weak entity type to have multiple identifying relationships (and hence multiple owner entity types) (see Figure 3.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h70",
+      "split": "heldout",
+      "lang": "zh",
+      "question": "UML 类图是怎么表示实体类型和关系的？",
+      "latency_s": 0.112,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.03,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 21,
+          "score": 0.319
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 21
+        }
+      ],
+      "answer": "UML class diagrams } Represent classes (similar to entity types) as large rounded boxes with three sections: } Top section includes entity type (class) name } Second section includes attributes } Third section includes class operations (operations are not in basic ER model) } Relationships (called associations) represented as lines connecting the classes } Other UML terminology also differs from ER terminology } Used in database design and object-oriented software design } UML has many other types of diagrams for software design 21",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h71",
+      "split": "heldout",
+      "lang": "en",
+      "question": "What are the pros and cons of commercial data modeling tools mentioned in the lecture?",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.024,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 20,
+          "score": 0.9391
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 31,
+          "score": 0.8664
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 20
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 31
+        }
+      ],
+      "answer": "Data Modeling Tools } A number of popular tools that cover conceptual modeling and mapping into relational schema design. Alternative diagrammatic notation } ER diagrams is one popular example for displaying database schemas } Many other notations exist in the literature and in various database design and modeling tools } UML class diagrams is representative of another way of displaying ER concepts that is used in several commercial design tools 20 } POSITIVES: } Serves as documentation of application requirements, easy user interface - mostly graphics editor support } NEGATIVES: } Most tools lack a proper distinct notation for relationships with relationship attributes } Mostly represent a relational design in a diagrammatic form rather than a conceptual ER-based design 31",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "h72",
+      "split": "heldout",
+      "lang": "en",
+      "question": "When is a binary relationship redundant with respect to a ternary relationship?",
+      "latency_s": 0.115,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.025,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 26,
+          "score": 0.8806
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 24,
+          "score": 0.7966
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 13,
+          "score": 0.7139
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 27,
+          "score": 0.6866
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 25,
+          "score": 0.6562
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 26
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 24
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 13
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 27
+        }
+      ],
+      "answer": "Discussion of n-ary relationships (n > 2) } If a particular binary relationship can be derived from a higher-degree relationship at all times, then it is redundant } For example, the TAUGHT_DURING binary relationship in Figure 3. Discussion of n-ary relationships (n > 2) } In general, 3 binary relationships can represent different information than a single ternary relationship (see Figure 3. 17a and b, where all relationships convey different meanings) } In some cases, a ternary relationship can be represented as a weak entity if the data model allows a weak entity type to have multiple identifying relationships (and hence multiple owner entity types) (see Figure 3.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "d01",
+      "split": "dev",
+      "lang": "en",
+      "question": "What are the uses of regression?",
+      "latency_s": 0.105,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.02,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 8,
+          "score": 1.2676
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 7,
+          "score": 1.2157
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 8
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 7
+        }
+      ],
+      "answer": "Why regression What are the uses of regression? There are several main uses for regression: 1. Regression models means.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "d02",
+      "split": "dev",
+      "lang": "zh",
+      "question": "什么是GLM？",
+      "latency_s": 0.107,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10,
+          "score": 0.4419
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 13,
+          "score": 0.4357
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 36,
+          "score": 0.43
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 11,
+          "score": 0.4296
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 12,
+          "score": 0.4274
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 13
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 36
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 11
+        }
+      ],
+      "answer": "Revision of GLM Summary of Generalized linear models A generalized linear regression model for {(Yi, Xi)}n i=1 has the following assumptions: 1. Revision of GLM Anatomy of a GLM Every GLM is specified by three components: 1. GLM-examples Logistic regression Fitting the Logistic Regression Model The glm command is used to fit a logistic regression model: > summary(group.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "d03",
+      "split": "dev",
+      "lang": "zh",
+      "question": "什么是线性回归？",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "d04",
+      "split": "dev",
+      "lang": "zh",
+      "question": "什么是p value？",
+      "latency_s": 0.103,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.015,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 21,
+          "score": 0.5891
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 41,
+          "score": 0.5754
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 38,
+          "score": 0.5639
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37,
+          "score": 0.5604
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 44,
+          "score": 0.5558
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 21
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 41
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 38
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 37
+        }
+      ],
+      "answer": "GoF F-test - Ordinary linear regression Model comparison: F-Test II The F-statistic for the added variable test is defined in terms of the residual sums of squares (RSS) for the two models and the number of explanatory variables k in each model: fo = (RSSSub −RSSFull)/(kFull −kSub) RSSFull/(n −kFull −1) p-value = Pr(F ≥f0) where F ∼FkFull−kSub,n−kFull−1 21/74 982 The p-value is calculated using the χ2 1 distribution: > 1-pchisq(28. 78 on 168 degrees of freedom p-value is 0.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "d05",
+      "split": "dev",
+      "lang": "zh",
+      "question": "Normal regression 的GLM数学公式是什么？",
+      "latency_s": 0.177,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.031,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 59,
+          "score": 1.0807
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 59
+        }
+      ],
+      "answer": "Appendix Some Generalized Linear Models We can write slide 11 as: ▶Normal regression: Y ∼Normal(µ, σ2In) µ = Xβ. ▶Poisson regression (count data): Y ∼Poisson(µ), log(µ) = Xβ. ▶Logistic regression (# of successes out of ni trials): Y ∼Binomial(n, p), logit(p) = Xβ.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "d06",
+      "split": "dev",
+      "lang": "zh",
+      "question": "Residual是什么？",
+      "latency_s": 0.103,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.017,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "d07",
+      "split": "dev",
+      "lang": "zh",
+      "question": "Pearson residuals的数学表示是什么？",
+      "latency_s": 0.118,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.029,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 9,
+          "score": 0.6246
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 9
+        }
+      ],
+      "answer": "Diagnostics Residuals Pearson residuals Pearson residuals r’s are standardized measures of the difference between observed values and expected values in statistical models. ri = Yi −ˆµi(Xi) p Var(Yi|Xi) , i = 1, . .",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "d08",
+      "split": "dev",
+      "lang": "zh",
+      "question": "deviance是什么模型和什么模型比较？",
+      "latency_s": 0.116,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.029,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "d09",
+      "split": "dev",
+      "lang": "zh",
+      "question": "intercept是什么？",
+      "latency_s": 0.099,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.012,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "u01",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "What formula defines the LASSO penalty, and how is its tuning parameter chosen?",
+      "latency_s": 0.158,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 58,
+          "score": 0.6894
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 28,
+          "score": 0.6113
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 18,
+          "score": 0.4879
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 58
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 28
+        }
+      ],
+      "answer": "logit) Call: glm(formula = cbind(yes, no) ~ age, family = binomial(link = \"logit\"), data = group. 1 ^a ^a 1 (Dispersion parameter for binomial family taken to be 1) Null deviance: 63. Appendix Matrix Notation II Which can be written as a vector equation: β0   1 .",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "u02",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "How is the Akaike information criterion (AIC) calculated?",
+      "latency_s": 0.11,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.021,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "u03",
+      "split": "unanswerable",
+      "lang": "zh",
+      "question": "随机森林是如何构建的？",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.017,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "u04",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "What is the variance inflation factor, and what cutoff indicates problematic multicollinearity?",
+      "latency_s": 0.12,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.025,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "char2.pdf",
+          "page": 50,
+          "score": 0.8186
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 50,
+          "score": 0.74
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 49,
+          "score": 0.6943
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10,
+          "score": 0.685
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 52,
+          "score": 0.6489
+        }
+      ],
+      "citations": [
+        {
+          "filename": "char2.pdf",
+          "page": 50
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 50
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 49
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 10
+        }
+      ],
+      "answer": "Modelling Dispersion in GLM Variance Modelling in GLMs A couple of common approaches follow: ▶Quasi-likelihood If the variance of the data is greater or smaller than the probabilistic model, we use a “fudge factor” (Dispersion parameter, τ) to adjust for overdispersion or underdispersion. GLM-examples Poisson regression Creating Indicator Variables The indicator variables can be created by using factor and the way the variables were created can be determined by using contrasts: > crab. , the variance of count data may be greater/smaller than the mean.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "u05",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "How does a zero-inflated Poisson model handle excess zeros?",
+      "latency_s": 0.103,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.023,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5,
+          "score": 0.5287
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 69,
+          "score": 0.4888
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 56,
+          "score": 0.3875
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 52,
+          "score": 0.3629
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 61,
+          "score": 0.3624
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 69
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 56
+        }
+      ],
+      "answer": "Specialized and Distributional Extensions: Quantile regression, Zero-inflated count models 5/59 Offsets Fitting Poisson Model with Offset > model1<-glm(n ~ Cytology*Age*Residence+offset(log(pop/100000)), family=poisson, data=cancer. Modelling Dispersion in GLM Negative Binomial Regression Negative Binomial Regression One way to deal with count data that is overdispersed (relative to a Poisson model) is to use the negative binomial distribution.",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "u06",
+      "split": "unanswerable",
+      "lang": "zh",
+      "question": "数据库事务的 ACID 特性分别是什么？",
+      "latency_s": 0.106,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.019,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "u07",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "What is third normal form (3NF) in relational database design?",
+      "latency_s": 0.129,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.039,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 21,
+          "score": 0.8539
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 20,
+          "score": 0.7667
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 21
+        },
+        {
+          "filename": "Lectures_Topic_03_2.pdf",
+          "page": 20
+        }
+      ],
+      "answer": "UML class diagrams } Represent classes (similar to entity types) as large rounded boxes with three sections: } Top section includes entity type (class) name } Second section includes attributes } Third section includes class operations (operations are not in basic ER model) } Relationships (called associations) represented as lines connecting the classes } Other UML terminology also differs from ER terminology } Used in database design and object-oriented software design } UML has many other types of diagrams for software design 21 Alternative diagrammatic notation } ER diagrams is one popular example for displaying database schemas } Many other notations exist in the literature and in various database design and modeling tools } UML class diagrams is representative of another way of displaying ER concepts that is used in several commercial design tools 20",
+      "answer_path": "extractive"
+    },
+    {
+      "id": "u08",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "How does a B+ tree index speed up range queries?",
+      "latency_s": 0.106,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.022,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "u09",
+      "split": "unanswerable",
+      "lang": "zh",
+      "question": "SQL 中 LEFT JOIN 和 INNER JOIN 有什么区别？",
+      "latency_s": 0.097,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.018,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [],
+      "citations": [],
+      "answer": "I do not have sufficient information in the available sources to answer this question.",
+      "answer_path": "no_evidence"
+    },
+    {
+      "id": "u10",
+      "split": "unanswerable",
+      "lang": "en",
+      "question": "How is k-fold cross-validation used to estimate prediction error?",
+      "latency_s": 0.109,
+      "llm_calls": [
+        {
+          "stage": "embed",
+          "seconds": 0.016,
+          "error": null,
+          "inputs": 1
+        }
+      ],
+      "usage": [],
+      "retrieved": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 36,
+          "score": 0.5637
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5,
+          "score": 0.5636
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 28,
+          "score": 0.5489
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 7,
+          "score": 0.52
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 58,
+          "score": 0.4876
+        }
+      ],
+      "citations": [
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 36
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 5
+        },
+        {
+          "filename": "char2.pdf",
+          "page": 28
+        },
+        {
+          "filename": "Charpeter1.pdf",
+          "page": 7
+        }
+      ],
+      "answer": "Cross-validation (predictive risk) 4. GLM-examples Logistic regression Fitting the Logistic Regression Model The glm command is used to fit a logistic regression model: > summary(group. GoF χ2-test - Logistic/Poisson regression Logistic Regression Model The glm command is used to fit a logistic regression model: > summary(group.",
+      "answer_path": "extractive"
+    }
+  ]
+}

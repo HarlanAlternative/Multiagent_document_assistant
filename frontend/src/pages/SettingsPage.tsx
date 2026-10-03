@@ -20,6 +20,15 @@ type ProviderPreset = {
   compatibilityNote?: string;
 };
 
+const DEFAULT_LOCAL_EMBEDDING_MODEL = "Qwen/Qwen3-Embedding-0.6B-Q";
+
+const embeddingModelDefaults: Record<string, string> = {
+  deterministic: "",
+  openai: "text-embedding-3-large",
+  bedrock: "amazon.titan-embed-text-v2:0",
+  local: DEFAULT_LOCAL_EMBEDDING_MODEL,
+};
+
 const providerPresets: ProviderPreset[] = [
   {
     id: "openai",
@@ -79,10 +88,12 @@ const providerPresets: ProviderPreset[] = [
   {
     id: "deepseek",
     label: "DeepSeek",
-    description: "DeepSeek model names for its compatible endpoint or another router.",
+    description: "DeepSeek's OpenAI-compatible endpoint. DeepSeek has no embeddings API, so this preset embeds locally.",
     baseUrl: "https://api.deepseek.com/v1",
     wireApi: "chat_completions",
-    models: ["deepseek-chat", "deepseek-reasoner"],
+    models: ["deepseek-flash", "deepseek-v4-pro", "deepseek-chat", "deepseek-reasoner"],
+    defaultEmbeddingProvider: "local",
+    defaultEmbeddingModel: DEFAULT_LOCAL_EMBEDDING_MODEL,
   },
   {
     id: "custom",
@@ -410,10 +421,14 @@ export function SettingsPage() {
               <span className="mb-2 block text-sm font-semibold text-ink-700">Embedding provider</span>
               <select
                 value={embeddingProvider}
-                onChange={(event) => setEmbeddingProvider(event.target.value)}
+                onChange={(event) => {
+                  setEmbeddingProvider(event.target.value);
+                  setEmbeddingModel(embeddingModelDefaults[event.target.value] ?? "");
+                }}
                 className="w-full rounded-2xl border border-ink-200 bg-white px-4 py-3 text-sm text-ink-800"
               >
                 <option value="deterministic">deterministic</option>
+                <option value="local">local (runs on this machine)</option>
                 <option value="openai">openai</option>
                 <option value="bedrock">bedrock</option>
               </select>
@@ -425,7 +440,7 @@ export function SettingsPage() {
                 value={embeddingModel}
                 onChange={(event) => setEmbeddingModel(event.target.value)}
                 className="w-full rounded-2xl border border-ink-200 bg-white px-4 py-3 text-sm text-ink-800"
-                placeholder={embeddingProvider === "openai" ? "text-embedding-3-large" : "amazon.titan-embed-text-v2:0"}
+                placeholder={embeddingModelDefaults[embeddingProvider] || "Not used by deterministic embeddings"}
               />
             </label>
 
